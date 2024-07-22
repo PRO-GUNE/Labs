@@ -4,7 +4,7 @@ pkg load signal
 pkg load image
 
 # Filter : medium size high pass filter - 50%
-coefficients = fir1(8, 0.5, "high");
+coefficients = fir1(24, 0.5, "low");
 
 # Round off values for efficient implementation so that +3, -3 coefficients are approximately 1. +4, -4 are nearly 0
 coefficients = round(32 * coefficients);
@@ -13,12 +13,14 @@ coefficients = round(32 * coefficients);
 coefficients = coefficients(2:end-1);
 
 # Let the amplification factor be 1 then the resultin coefficients are
-sig_i = zeros(1, 7);
-sig_i(4) = 1;
-filter = sig_i + 1 * coefficients/32;
+sig_i = zeros(1, 23);
+sig_i(12) = 1;
+filter = sig_i + 1 * coefficients/(2^16);
+
+print(filter);
 
 # Plot the filter
-freqz(filter)
+freqz(filter);
 
 # load the file and apply the sharpness filter
 img = imread("images.jpeg");
