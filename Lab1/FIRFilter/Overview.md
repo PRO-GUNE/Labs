@@ -1,0 +1,68 @@
+# FIR Filter Design (Index : 200193U)
+
+Design a low-pass FIR filter that allows frequencies below 400 Hz to pass through and attenuates frequencies above 400 Hz. The maximum frequency of the input signal is 1 kHz. The filter must have a passband ripple of 5 dB and a stopband attenuation of 40 dB. The filter must have a sampling frequency of 2 kHz according to the Nyquist theorem.
+
+Use a FIR filter with 25 taps to implement the filter. The filter must be implemented in VHDL and tested using a testbench.
+
+## Theory
+An FIR filter is a digital filter whose impulse response is of finite duration. The impulse response of an FIR filter is the sequence of coefficients of the filter. The output of an FIR filter is the convolution of the input signal with the impulse response of the filter. The impulse response of an FIR filter is given by the following equation:
+
+$ h[n] = \sum_{k=0}^{M-1} h[k] \delta[n-k] $
+
+where:
+- $ h[n] $ is the impulse response of the filter
+- $ h[k] $ is the k-th coefficient of the filter
+- $ \delta[n-k] $ is the unit impulse function
+
+## Design Parameters
+- Passband frequency: 400 Hz
+- Stopband frequency: 500 Hz
+- Sampling frequency: 2 kHz
+- Passband ripple: 5 dB
+- Stopband attenuation: 40 dB
+- Number of taps: 25
+
+The FIR filter coefficients were generated using this website: [FIR Filter Design](http://t-filter.engineerjs.com/). The coefficients generated as 16-bit signed integers are shown below:
+
+```
+    [621, 1252, 955, -464, -1427, -442, 1279, 815, -2028, -2978, 1849, 9985, 14052, 9985, 1849, -2978, -2028, 815, 1279, -442, -1427, -464, 955, 1252, 621]
+```
+
+## Filter design
+
+### High level design
+A high level architecture of the FIR filter is shown below:
+
+![High level design of the FIR filter](high_level_design.png)
+
+### Systolic architecture
+After further analysis, the Systolic architecture was chosen for the FIR filter implementation. The Systolic architecture is a pipelined architecture that allows the filter to process multiple samples in parallel. The architecture of the FIR filter is shown below:
+
+![Systolic FIR filter design](systolic_design.png)
+
+This architecture will be followed in the implementation as it allows us to focus on the from scratch implementation of the FIR filter. We can opt to use DSP units to implement the filter but this will not be done in this implementation but it is also noted below.
+
+#### Note - DSP units
+In this architecture, the DSP units are extensively used. The DSP units can be used to perform complex arithmetic operations such as multiplication and addition in a single clock cycle. The DSP units are used to multiply the input samples with the filter coefficients and accumulate the results. The output of the filter is the sum of the products of the input samples and the filter coefficients. The following configuration of the DSP units can be used for the FIR filter implementation:
+
+![DSP Unit Configuration](DSP_configuration.png)
+
+With synthesis tools, it is possible to create DSP units in 2 ways: inference and instantiation. 
+- Inference is when the synthesis tool automatically detects that a DSP unit is needed and instantiates it. This makes is easier for the designer as the synthesis tool takes care of the details but can lead to sub optimal performance.  
+- Instantiation is when the designer explicitly instantiates the DSP unit in the code. This is more complex but allows the designer to have more control over the design hence allowing us to attain required performance.
+
+## Implementation
+
+### src
+The FIR filter will be implemented in VHDL. The filter design will include the following files within the `src` directory:
+1. `low_pass_filter.vhd`: The top level file.
+2. `filter_slice.vhd`: This operates as the shift register that shifts the current tap value to the next tap value.
+3. `filter_control.vhd`: This controls the filter operation to properly align with the delays.
+4. `filter_arith.vhd`: This performs the multiplication and accumulation of the input samples and the filter coefficients.
+
+### testbench
+A self checking test bench is implemented. We will use the filter on a 1280 x 720 pixel image for the test. A Octave script is used to first convert the source image to `.ppm` format. Another Octave script is written to perform the Low pass filter operation on this image and save it as `image_expected.ppm`. These file is then copied to the sim folder of the testbench. The testbench will then read the image and apply the filter to it. The output image is saved as `image_response.ppm`. The testbench will then compare the output image with the expected image and report if the test passed or failed.
+
+The self checking test bench allow us to test the operation easily and quickly. The test bench will also be used to verify the operation of the filter.
+
+The results of the test bench are given in the `test` directory. The values of the response has an approximate deviation of around `20` from the expected values generated by the Octave script.
