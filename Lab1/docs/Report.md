@@ -19,7 +19,7 @@ The `BigNum` class is the core of the library, encapsulating a vector of digits 
 - **Parameterized Constructor (string)**: Takes a string representation of a number as input, determines its sign, and converts it into a vector of digits. The string can include a leading negative sign.
 
 #### Utility Functions
-- **getModulus(const int mod_bit_length)**: Returns the modulus of the number based on the specified bit length. The modulus is defined as $2^{bitlength}$.
+- **getModulus(const int mod_bit_length)**: Returns the modulus of the number based on the specified bit length. The modulus is defined as 2 raised to the power of the bit length.
 
 #### Helper Functions
 
@@ -45,9 +45,6 @@ The library overloads several operators to provide intuitive usage:
 - **modInverse()**: Computes the modular inverse of a `BigNum` object using the Extended Euclidean Algorithm. This is useful in cryptographic applications and number theory.
 
 ### Implementation
-The project structure is designed as follows:
-
-
 The project structure is designed as follows:
 
 ```
