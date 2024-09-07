@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
 
-    printf("Time taken with %d threads: %f seconds\n", numThreads, cpu_time_used);
+    printf("%f", cpu_time_used);
 
     pthread_rwlock_destroy(&listRwlock);
     return 0;

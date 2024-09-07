@@ -5,6 +5,7 @@ TOPDIR = ../
 SRCDIR = $(TOPDIR)src/
 BINDIR = $(TOPDIR)bin/
 TESTDIR = $(TOPDIR)test/
+LOGSDIR = $(TOPDIR)logs/
 
 # Compiler
 CC = gcc
@@ -35,4 +36,4 @@ $(BINDIR)rwlock.o: $(TESTDIR)test_rwlock.c $(SRCDIR)linked_list_rwlock.c $(SRCDI
 
 # Clean
 clean:
-	rm -f $(BINDIR)*.o *.log
+	rm -f $(BINDIR)*.o $(LOGSDIR)*.csv

@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 
     free(operations);
 
-    printf("Time taken: %f seconds\n", cpu_time_used);
+    printf("%f", cpu_time_used);
 
     return 0;
 }
