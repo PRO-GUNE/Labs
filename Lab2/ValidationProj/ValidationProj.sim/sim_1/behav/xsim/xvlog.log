@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/University/Semester_07/CS4363_Hardware_Description_Languages/Labs/Lab2/Design_files/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/University/Semester_07/CS4363_Hardware_Description_Languages/Labs/Lab2/Design_files/tb_alu_improved.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_tb_improved
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/University/Semester_07/CS4363_Hardware_Description_Languages/Labs/Lab2/ValidationProj/ValidationProj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
