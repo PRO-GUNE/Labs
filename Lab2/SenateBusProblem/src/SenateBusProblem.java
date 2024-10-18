@@ -9,6 +9,8 @@ public class SenateBusProblem {
     private static final Semaphore boarded = new Semaphore(0); // Signaled when rider boards
 
     private static final Random random = new Random();
+
+    // Change the mean inter-arrival time for busses and riders as needed
     private static final double BUS_MEAN_INTER_ARRIVAL = 20 * 60; // 20 minutes in seconds
     private static final double RIDER_MEAN_INTER_ARRIVAL = 30; // 30 seconds
 
@@ -20,6 +22,7 @@ public class SenateBusProblem {
                 // Lock to update the number of waiting riders
                 mutex.acquire();
                 waiting += 1;
+                waiting(); // Simulate the rider waiting at the bus stop
                 mutex.release();
 
                 // Wait for the bus to signal that it's ready to board
@@ -36,6 +39,11 @@ public class SenateBusProblem {
         private void board() {
             // Simulate boarding the bus
             System.out.println("Rider has boarded the bus.");
+        }
+
+        private void waiting() {
+            // Simulate the rider waiting at the bus stop
+            System.out.println("Rider is waiting at the bus stop.");
         }
     }
 

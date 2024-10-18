@@ -1,9 +1,10 @@
-## Getting Started
+# Lab 2: Senate Bus Problem
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Authors
+- Chathura Gunasekara (200193U)
+- Thanushanth Kanagarajah (200636H)
 
 ## Folder Structure
-
 The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
@@ -11,8 +12,52 @@ The workspace contains two folders by default, where:
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Compile the Application
+To compile the application using the `javac` command, follow these steps:
 
-## Dependency Management
+- Open a terminal
+- Navigate to the `src` folder
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```bash
+cd src
+```
+
+- Compile the application
+
+```bash
+javac SenateBusProblem.java
+```
+
+- Move the compiled files to the `bin` folder
+
+```bash
+mv *.class ../bin
+```
+
+## Run the Application
+To run the application using the `java` command, follow these steps:
+
+- Open a terminal
+- Navigate to the `bin` folder
+
+```bash
+cd bin
+```
+
+- Run the following command
+
+```bash
+java SenateBusProblem
+```
+
+Alternatively, you can run the application without the `java` command using the following command:
+
+```bash
+cd bin
+```
+
+- Run the following command
+
+```bash
+./SenateBusProblem
+```
