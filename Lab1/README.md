@@ -1,7 +1,7 @@
 # Lab1 - Report
 ## Authors
 - Chathura Gunasekara (200193U)
-- Thanushanth Sivakumar (200192V)
+- Thanushanth Kanagarajah (200636H)
 
 # Project structure
 The project structure is as follows:
