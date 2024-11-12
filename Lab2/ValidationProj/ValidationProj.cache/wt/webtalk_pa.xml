@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Oct  9 05:57:37 2024">
+<application name="pa" timeStamp="Fri Oct 18 00:03:54 2024">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="3f7bdfc639f74fbaa9f77abe102639a0" type="ProjectID"/>
-<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+<property name="ProjectID" value="d95a10579b3b4b2a9a6b2855a12dc06f" type="ProjectID"/>
+<property name="ProjectIteration" value="7" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -17,39 +17,74 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
-<property name="AddSources" value="2" type="JavaHandler"/>
-<property name="EditDelete" value="2" type="JavaHandler"/>
-<property name="NewProject" value="1" type="JavaHandler"/>
-<property name="SetTopNode" value="1" type="JavaHandler"/>
-<property name="SimulationRun" value="1" type="JavaHandler"/>
+<property name="AddSources" value="1" type="JavaHandler"/>
+<property name="EditDelete" value="3" type="JavaHandler"/>
+<property name="ReportDRC" value="1" type="JavaHandler"/>
+<property name="ReportMethodology" value="1" type="JavaHandler"/>
+<property name="ReportTimingSummary" value="6" type="JavaHandler"/>
+<property name="RunImplementation" value="6" type="JavaHandler"/>
+<property name="RunSchematic" value="4" type="JavaHandler"/>
+<property name="RunSynthesis" value="3" type="JavaHandler"/>
+<property name="SetTopNode" value="8" type="JavaHandler"/>
+<property name="ShowView" value="18" type="JavaHandler"/>
+<property name="ToggleAutoFitSelection" value="1" type="JavaHandler"/>
+<property name="ToggleSelectAreaMode" value="2" type="JavaHandler"/>
+<property name="UpdateSourceFiles" value="1" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="3" type="JavaHandler"/>
+<property name="ViewTaskRTLAnalysis" value="3" type="JavaHandler"/>
+<property name="XdcSetMaximumDelay" value="6" type="JavaHandler"/>
+<property name="XdcSetMinimumDelay" value="3" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
-<property name="AbstractFileView_RELOAD" value="1" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="2" type="GuiHandlerData"/>
-<property name="BoardChooser_BOARD_TABLE" value="1" type="GuiHandlerData"/>
-<property name="CmdMsgDialog_OK" value="1" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="14" type="GuiHandlerData"/>
-<property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="1" type="GuiHandlerData"/>
-<property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="MsgTreePanel_MESSAGE_SEVERITY" value="2" type="GuiHandlerData"/>
-<property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="5" type="GuiHandlerData"/>
-<property name="PACommandNames_ADD_SOURCES" value="2" type="GuiHandlerData"/>
-<property name="PACommandNames_AUTO_UPDATE_HIER" value="3" type="GuiHandlerData"/>
-<property name="PACommandNames_SET_AS_TOP" value="1" type="GuiHandlerData"/>
-<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="2" type="GuiHandlerData"/>
-<property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="1" type="GuiHandlerData"/>
-<property name="ProjectNameChooser_PROJECT_NAME" value="1" type="GuiHandlerData"/>
-<property name="RDICommands_DELETE" value="2" type="GuiHandlerData"/>
-<property name="SaveProjectUtils_SAVE" value="1" type="GuiHandlerData"/>
-<property name="SrcChooserPanel_ADD_DIRECTORIES" value="1" type="GuiHandlerData"/>
-<property name="SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="SrcMenu_IP_HIERARCHY" value="3" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="1" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="48" type="GuiHandlerData"/>
+<property name="BaseDialog_YES" value="4" type="GuiHandlerData"/>
+<property name="BaseReportTab_RERUN" value="10" type="GuiHandlerData"/>
+<property name="CmdMsgDialog_OK" value="5" type="GuiHandlerData"/>
+<property name="CmdMsgTreeDialog_OK" value="1" type="GuiHandlerData"/>
+<property name="CreateSrcFileDialog_FILE_NAME" value="2" type="GuiHandlerData"/>
+<property name="EditXdcPanel_EDIT_FROM_THRU_TO_TABLE" value="14" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="43" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="36" type="GuiHandlerData"/>
+<property name="FromTargetSpecifierPanel_SPECIFY_START_POINTS" value="11" type="GuiHandlerData"/>
+<property name="GetObjectsDialog_FIND" value="2" type="GuiHandlerData"/>
+<property name="MinMaxDelayCreationPanel_MIN_MAX_DELAY_CREATION_PANEL_TABBED" value="2" type="GuiHandlerData"/>
+<property name="MinMaxDelayCreationPanel_SPECIFY_PATH_DELAY" value="12" type="GuiHandlerData"/>
+<property name="NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE" value="77" type="GuiHandlerData"/>
+<property name="NetlistSchMenuAndMouse_EXPAND_COLLAPSE" value="7" type="GuiHandlerData"/>
+<property name="NetlistSchMenuAndMouse_VIEW" value="8" type="GuiHandlerData"/>
+<property name="NetlistTreeView_NETLIST_TREE" value="8" type="GuiHandlerData"/>
+<property name="PACommandNames_ADD_SOURCES" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_FIT_SELECTION" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_UPDATE_HIER" value="12" type="GuiHandlerData"/>
+<property name="PACommandNames_REPORTS_WINDOW" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_SELECT_AREA" value="2" type="GuiHandlerData"/>
+<property name="PACommandNames_SET_AS_TOP" value="8" type="GuiHandlerData"/>
+<property name="PACommandNames_SRC_REPLACE_FILE" value="1" type="GuiHandlerData"/>
+<property name="PAViews_PATH_TABLE" value="1" type="GuiHandlerData"/>
+<property name="PAViews_SCHEMATIC" value="2" type="GuiHandlerData"/>
+<property name="PAViews_TIMING_CONSTRAINTS" value="1" type="GuiHandlerData"/>
+<property name="ProjectTab_CLOSE_DESIGN" value="4" type="GuiHandlerData"/>
+<property name="ProjectTab_RELOAD" value="6" type="GuiHandlerData"/>
+<property name="RDICommands_DELETE" value="3" type="GuiHandlerData"/>
+<property name="SaveProjectUtils_DONT_SAVE" value="3" type="GuiHandlerData"/>
+<property name="SaveSchematicDialog_SPECIFY_OUTPUT_PDF_FILE" value="2" type="GuiHandlerData"/>
+<property name="SchMenuAndMouse_EXPAND_CONE" value="5" type="GuiHandlerData"/>
+<property name="SchMenuAndMouse_SAVE_AS_PDF_FILE" value="4" type="GuiHandlerData"/>
+<property name="SrcChooserPanel_CREATE_FILE" value="2" type="GuiHandlerData"/>
+<property name="SrcMenu_IP_HIERARCHY" value="12" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="3" type="GuiHandlerData"/>
+<property name="TimingItemFlatTablePanel_TABLE" value="2" type="GuiHandlerData"/>
+<property name="TimingSumResultsTab_SHOW_ONLY_FAILING_CHECKS" value="1" type="GuiHandlerData"/>
+<property name="ToTargetSpecifierPanel_SPECIFY_END_POINTS" value="9" type="GuiHandlerData"/>
+<property name="XdcCategoryTree_XDC_CATEGORY_TREE" value="20" type="GuiHandlerData"/>
+<property name="XdcEditorView_APPLY_ALL_CHANGES_TO_XDC_CONSTRAINTS" value="5" type="GuiHandlerData"/>
+<property name="XdcViewerTreeTablePanel_XDC_VIEWER_TREE_TABLE" value="3" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="141" type="GuiMode"/>
+<property name="GuiMode" value="144" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="132" type="TclMode"/>
+<property name="TclMode" value="134" type="TclMode"/>
 </item>
 </section>
 </application>
